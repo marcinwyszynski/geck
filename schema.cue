@@ -1,31 +1,29 @@
 package geck
 
-_#Node: {
-	config?: {[string]: _}
-	exports?: {[string]: _}
-	...
-}
-
 #Sensitive: {
 	_sensitive: true
 	value:      _
 }
 
-#Provider: _#Node & {
-	source: string
-	ref:    string
-	...
+#Provider: {
+	source!: string
+	ref:     string
+	config?: {[string]: _}
+	exports?: {[string]: _}
 }
 
-#Resource: _#Node & {
-	kind:     string
-	provider: string
-	...
+#Resource: {
+	kind!:     string
+	provider!: string
+	config?: {[string]: _}
+	exports?: {[string]: _}
 }
 
-#Module: _#Node & {
+#Module: {
 	components: {[string]: #Component}
 	providers: {[string]: string}
+	config?: {[string]: _}
+	exports?: {[string]: _}
 }
 
 #Conditional: {condition: bool}
