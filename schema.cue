@@ -29,4 +29,4 @@ package geck
 #Conditional: {condition: bool}
 #Expansion: {expand: string}
 
-#Component: (#Provider | #Resource | #Module) & (#Conditional | #Expansion | {})
+#Component: #Provider | #Resource | #Module
