@@ -6,6 +6,11 @@ _#Node: {
 	...
 }
 
+#Sensitive: {
+	_sensitive: true
+	value:      _
+}
+
 #Provider: _#Node & {
 	source: string
 	ref:    string
@@ -26,7 +31,4 @@ _#Node: {
 #Conditional: {condition: bool}
 #Expansion: {expand: string}
 
-#Component: (
-	#Provider |
-	(#Resource & ( #Conditional | #Expansion | {} )) |
-	(#Module & ( #Conditional | #Expansion | {} )))
+#Component: (#Provider | #Resource | #Module) & (#Conditional | #Expansion | {})
