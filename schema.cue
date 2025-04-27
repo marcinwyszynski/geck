@@ -1,3 +1,5 @@
+package geck
+
 _#Node: {
 	config?: {[string]: _}
 	exports?: {[string]: _}
