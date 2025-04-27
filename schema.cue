@@ -26,7 +26,4 @@ package geck
 	exports?: {[string]: _}
 }
 
-#Conditional: {condition: bool}
-#Expansion: {expand: string}
-
 #Component: #Provider | #Resource | #Module
